@@ -1,0 +1,17 @@
+A simple linux app that show desktop notifications when keyboard lock keys are pressed.
+
+On ubuntu requires: python, python-gtk, python-notify e python-xorg.
+
+How to install:
+
+git clone github.com/fenrrir/Pyledkeys
+cd Pyledkeys
+sudo python setup.py install
+
+How to add to gnome session:
+
+https://help.ubuntu.com/community/AddingProgramToSessionStartup
+
+
+
+
