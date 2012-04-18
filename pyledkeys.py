@@ -256,14 +256,14 @@ class App(object):
 
     def show_about(self):
         self.about = gtk.AboutDialog()
-        self.about.set_name("PyLedsStatus")
+        self.about.set_name("PyLedkeys")
         self.about.set_version("0.1")
-        self.about.set_comments("Show keyboard leds status")
+        self.about.set_comments("A simple linux app that show desktop notifications when keyboard lock keys are pressed.")
         self.about.set_copyright("Copyright (C) 2012 Rodrigo Pinheiro Marques de Araujo")
         self.about.set_authors(["Rodrigo Pinheiro Marques de Araujo <fenrrir@gmail.com>"])
         self.about.set_license(LICENSE)
-        self.about.set_program_name("PyLedsStatus")
-        self.about.set_website("http://github.com/fenrrir")
+        self.about.set_program_name("PyLedkeys")
+        self.about.set_website("github.com/fenrrir/Pyledkeys")
         self.about.run()
         self.about.destroy()
 

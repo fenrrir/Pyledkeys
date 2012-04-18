@@ -4,7 +4,7 @@ On ubuntu requires: python, python-gtk, python-notify e python-xorg.
 
 How to install:
 
-git clone github.com/fenrrir/Pyledkeys
+git clone git://github.com/fenrrir/Pyledkeys.git
 cd Pyledkeys
 sudo python setup.py install
 
