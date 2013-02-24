@@ -39,6 +39,7 @@ import os
 import gtk
 import thread
 import pynotify
+import appindicator
 
 
 from Xlib import X, XK, display
@@ -159,8 +160,15 @@ class App(object):
 
 
     def __init__(self):
+        self.ind = appindicator.Indicator("example-simple-client", 
+                                          "indicator-messages", 
+                                          appindicator.CATEGORY_APPLICATION_STATUS)
+        self.ind.set_status(appindicator.STATUS_ACTIVE)
+        self.ind.set_icon("accessories-character-map")
+
         self.setup_icon()
         self.load_menu()
+        self.ind.set_menu(self.menu)
         self.stop = False
         self.observer = XOrgKeyObserver(listener=self)
         self.num_lock_state = self.observer.num_lock
@@ -189,8 +197,6 @@ class App(object):
         self.icon = gtk.StatusIcon()
         self.icon.set_from_file("/usr/share/icons/gnome/24x24/apps/accessories-character-map.png")
         self.icon.set_visible(True)
-        self.icon.connect('popup_menu', self.popup_menu)
-        self.icon.connect('activate', self.icon_activate)
 
 
     def icon_activate(self, *args):
