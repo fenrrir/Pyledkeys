@@ -275,11 +275,6 @@ class App(object):
 
  
 
-    def popup_menu(self, widget, button, ctime):
-        self.menu.popup(None, None, 
-                        gtk.status_icon_position_menu, 
-                        button, ctime, widget)
-
     def run(self):
         self.show_led_status()
         #self.observer.listen()
